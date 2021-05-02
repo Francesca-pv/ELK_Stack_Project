@@ -1,31 +1,29 @@
 # ELK_Stack_Project
+- - GitHub resitory created during GW University Cybersecurity Bootcamp
+__________________________________________________________________________________________________________________________________
+![Network_Diagram](https://github.com/Francesca-pv/ELK_Stack_Project/blob/main/Diagrams/Network_Diagram.jpg)
 
-[Network_Diagram](https://github.com/Francesca-pv/ELK_Stack_Project/blob/main/Diagrams/Network_Diagram.jpg)
-​
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
-​
- - _TODO: Enter the playbook file._
-​
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
  - Beats in Use
  - Machines Being Monitored
 - How to Use the Ansible Build
-​
-​
+
+
 ### Description of the Topology
-​
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
-​
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
-​
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+ This repository includes code defining the infrastructure below. 
+ 
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the "D*mn Vulnerable Web Application."
+
+Load balancing ensures that the application will be highly **available** , in addition to restricting **inbound access** to the network.
+The load balancer ensures that the work will process incoming traffic will be shared by both vulnerable web servers. Access controls will ensure that only authorized users will be able to connect.
+
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **file systems of the Vms on the network** ans well as watch **system metrics** , such as CPU usage,attempted SSH logins; 'sudo' escalation failures; etc. 
+
 - _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
-​
+- _TODO: What does Metricbeat record
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 ​
