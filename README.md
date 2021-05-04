@@ -134,8 +134,8 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 
-**Filebeat**:Filebeat detects changes to the filesystem. In Particular, we use it to collect Apache logs.
-**Metricbeat**:Metricbeat detects changes in system metrics, such as CPU usage. We use it to detect SSH login attempts, failed `sudo` escalations, and CPU/RAM statistics.
+- **Filebeat**: Filebeat detects changes to the filesystem. In Particular, we use it to collect Apache logs.
+- **Metricbeat**: Metricbeat detects changes in system metrics, such as CPU usage. We use it to detect SSH login attempts, failed `sudo` escalations, and CPU/RAM statistics.
 
 
 ### Using the Playbook
