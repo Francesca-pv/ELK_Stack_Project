@@ -128,6 +128,7 @@ The playbook is duplicatied below.
 This ELK server is configured to monitor the DWVA 1 and DVWA 2 VMs,at '10.0.0.5' and '10.0.0.6', respectively.
 
 We have installed the following Beats on these machines:
+
 -Filebeat
 -Metricbeat
 
@@ -138,11 +139,13 @@ These Beats allow us to collect the following information from each machine:
 
 
 ### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
-​
+In order to use the playbook, you will need to have an Ansible control node already configured. We use the ** Jump Box** for this purpose.
+
+Assuming you have such a control node provisioned:
+
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
+- Copy the playbook file to the Ansible Control Node.
+- Update the playbook file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 ​
 _TODO: Answer the following questions to fill in the blanks:_
