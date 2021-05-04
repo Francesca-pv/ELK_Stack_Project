@@ -46,13 +46,13 @@ Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 ​
 A summary of the access policies in place can be found in the table below.
-​
+
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
-​
+| Jump Box | Yes                 | 52.173.32.30        |
+| ELK      | No                  | 10.0.0.1-254         |
+| DVWA 1   | No                  | 10.0.0.1-254         |
+| DVWA 2   | No                  | 10.0.0.1-254         |
 ### Elk Configuration
 ​
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
