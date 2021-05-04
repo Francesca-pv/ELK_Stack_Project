@@ -22,11 +22,11 @@ The load balancer ensures that the work will process incoming traffic will be sh
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **file systems of the Vms on the network** ans well as watch **system metrics** , such as CPU usage,attempted SSH logins; 'sudo' escalation failures; etc. 
 
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record
-The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+- The Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
+- The Metricbeat periodically collects metrics from the operating system and from services running on the server.
 
+
+The configuration details of each machine may be found below.
 
 | Name      | Function    | IP Address | Operating System |
 |-----------|-------------|------------|------------------|
@@ -35,9 +35,8 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | DVWA/VM 2 | Web Server  | 10.0.0.6   | Linux            |
 | ELK VM    | Monitoring  | 10.1.0.4   | Linux            |
 
-
+In additon Azure has provisioned a ** Load Balancer** in front of all machines except for the Jump Box.
 ### Access Policies
-​
 The machines on the internal network are not exposed to the public Internet.
 ​
 Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
