@@ -49,7 +49,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 52.173.32.30         |
+| Jump Box | Yes                 | 10.0.0.4         |
 | ELK      | No                  | 10.1.0.4             |
 | DVWA 1   | No                  | 10.0.0.5             |
 | DVWA 2   | No                  | 10.0.0.6             |
