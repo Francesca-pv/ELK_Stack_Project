@@ -56,13 +56,13 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it's easier to diploy. 
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it's easier to diploy and it allows for less human errors. 
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install docker 
+- Install DVWA image
+- Increase system memeory for DVWA and then enable docker module 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -160,7 +160,6 @@ The playbook below installs Metricbeat on the target hosts. The playbook for ins
     copy:
       src: /etc/ansible/files/metricbeat-config.yml
       dest: /etc/metricbeat/metricbeat.yml
-
     # Use command module
   - name: enable and configure docker module for metric beat
     command: metricbeat modules enable docker
@@ -172,7 +171,7 @@ The playbook below installs Metricbeat on the target hosts. The playbook for ins
     # Use command module
   - name: start metric beat
     command: service metricbeat start
-
+```
 
 
 ### Using the Playbook
@@ -182,12 +181,24 @@ Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
 - Copy the playbook file to the Ansible Control Node.
-- Update the playbook file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Update the playbook file to include **HOST**. 
+- Run the playbook, and navigate to **etc/filebeat** directory to check that the installation worked as expected.
 ​
 _TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+- _Which file is the playbook? Where do you copy it? 
+- Playbook is called - my-playbook.yml 
+- located inside etc/ansible 
+- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_   HOSTS file. 
 - _Which URL do you navigate to in order to check that the ELK server is running?
-​
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+ http://10.1.0.4:5601
+ -Located inside the ansible playbook and set the hosts equal to the group I want to install it to. 
+ 
+_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc. 
+- `wget github.com/playbook.yml` - this will download the playbook into the ansible container. 
+- Then `nano playbook.yml` to make edits. 
+- The second method is using Github:
+  - `git pull`
+  - *To update the files:* 
+  - `git add .`
+  - `git commit -m 'message'`
+  - `git push` 
