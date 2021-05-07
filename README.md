@@ -1,5 +1,5 @@
 # ELK_Stack_Project
-- - GitHub resitory created during GW University Cybersecurity Bootcamp
+- - GitHub repository created during GW University Cybersecurity Bootcamp
 __________________________________________________________________________________________________________________________________
 ![Network_Diagram](https://github.com/Francesca-pv/ELK_Stack_Project/blob/main/Diagrams/Network_Diagram.jpg)
 
